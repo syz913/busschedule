@@ -293,7 +293,7 @@ export default {
             }
           ],
           location: {
-            name: "理科图书馆东侧",
+            name: "日月西路近理科图书馆",
             calories: "校区宣传栏"
           }
         },
@@ -515,7 +515,7 @@ export default {
             }
           ],
           location: {
-            name: "理科图书馆东侧",
+            name: "日月西路近理科图书馆",
             calories: "I期图书馆西侧"
           }
         },
@@ -523,26 +523,49 @@ export default {
           route: "枫林 ⇆ 张江",
           desserts: [
             {
-              name: "西苑(近8号楼)",
-              calories: "II期1号门卫室东侧"
-            }
+              name: "7:00",
+              calories: ""
+            },
+            {
+              name: "7:30",
+              calories: ""
+            },
+            {
+              name: "",
+              calories: "7:50"
+            },
+            {
+              name: "9:00",
+              calories: ""
+            },
+            {
+              name: "12:15",
+              calories: "12:15"
+            },
+            {
+              name: "13:30",
+              calories: ""
+            },
+            {
+              name: "",
+              calories: "15:00"
+            },
+            {
+              name: "16:30",
+              calories: ""
+            },
+            {
+              name: "",
+              calories: "17:00"
+            },
+            {
+              name: "19:00",
+              calories: "19:00"
+            },
           ],
           location: {
             name: "西苑(近8号楼)",
             calories: "II期1号门卫室东侧"
-          }
-        },
-        {
-          route: "上科大 ⇆ 张江",
-          desserts: [
-            {
-              name: "学生宿舍区内",
-              calories: "I期图书馆西侧"
-            }
-          ],
-          location: {
-            name: "学生宿舍区内",
-            calories: "I期图书馆西侧"
           }
         }
       ],
@@ -620,7 +643,7 @@ export default {
             },
           ],
           location: {
-            name: "理科图书馆东侧",
+            name: "日月西路近理科图书馆",
             calories: "校区宣传栏"
           }
         },
@@ -670,20 +693,7 @@ export default {
             }
           ],
           location: {
-            name: "理科图书馆东侧",
-            calories: "I期图书馆西侧"
-          }
-        },
-        {
-          route: "上科大 ⇆ 张江",
-          desserts: [
-            {
-              name: "学生宿舍区内",
-              calories: "I期图书馆西侧"
-            }
-          ],
-          location: {
-            name: "学生宿舍区内",
+            name: "日月西路近理科图书馆",
             calories: "I期图书馆西侧"
           }
         }
