@@ -2,12 +2,8 @@
   <v-container class="parent">
     <div class="hello">
       <h2>{{ msg }}</h2>
-      <span>{{ updateDate }}</span>
-      <div class="my-2">
-        <v-btn color="green" style="color:white" @click="jump">官网</v-btn>
-      </div>
     </div>
-    <div class="content" style="margin: 30px 0 0 0">
+    <div class="content" style="margin: 10px 0 0 0">
       <v-tabs v-model="tab" grow>
         <v-tab v-for="item in items" :key="item.tab">{{ item.content }}</v-tab>
       </v-tabs>
@@ -17,7 +13,7 @@
             <v-expansion-panel v-for="(item,i) in weekdays" :key="i">
               <v-expansion-panel-header>{{item.route}}</v-expansion-panel-header>
               <v-expansion-panel-content>
-                <v-simple-table fixed-header height="300px">
+                <v-simple-table fixed-header height="240px">
                   <template v-slot:default>
                     <thead>
                       <tr>
@@ -42,7 +38,7 @@
             <v-expansion-panel v-for="(item,i) in weekdend" :key="i">
               <v-expansion-panel-header>{{item.route}}</v-expansion-panel-header>
               <v-expansion-panel-content>
-                <v-simple-table fixed-header height="300px">
+                <v-simple-table fixed-header height="240px">
                   <template v-slot:default>
                     <thead>
                       <tr>
@@ -63,6 +59,11 @@
           </v-expansion-panels>
         </v-tab-item>
       </v-tabs-items>
+      <v-fab-transition>
+        <v-btn class="fab" @click="jump" absolute dark fab bottom right color="success">
+          <v-icon>mdi-link</v-icon>
+        </v-btn>
+      </v-fab-transition>
     </div>
   </v-container>
 </template>
@@ -78,7 +79,6 @@ export default {
         { tab: "Two", content: "周末" }
       ],
       msg: "复旦大学校车时刻表",
-      updateDate: "更新于 2020年5月30日",
       weekdays: [
         {
           route: "邯郸 ⇆ 江湾",
@@ -561,7 +561,7 @@ export default {
             {
               name: "19:00",
               calories: "19:00"
-            },
+            }
           ],
           location: {
             name: "西苑(近8号楼)",
@@ -640,7 +640,7 @@ export default {
             {
               name: "22:30",
               calories: ""
-            },
+            }
           ],
           location: {
             name: "日月西路近理科图书馆",
@@ -665,7 +665,7 @@ export default {
             {
               name: "",
               calories: "17:30"
-            },
+            }
           ],
           location: {
             name: "老化学楼东侧",
@@ -718,6 +718,9 @@ export default {
 .v-expansion-panel-header {
   font-size: 16px;
   padding: 20px;
+}
+.fab{
+  margin-bottom: 50px;
 }
 h2 {
   color: #2196f3;
