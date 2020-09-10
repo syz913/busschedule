@@ -1,5 +1,5 @@
 <template>
-  <v-container class="parent">
+  <v-container class="parent" fluid>
     <div class="hello">
       <h2>{{ msg }}</h2>
     </div>
@@ -59,11 +59,9 @@
           </v-expansion-panels>
         </v-tab-item>
       </v-tabs-items>
-      <v-fab-transition>
-        <v-btn class="fab" @click="jump" absolute dark fab bottom right color="success">
+      <v-btn class="fab" @click="jump" dark fab bottom right color="success">
           <v-icon>mdi-link</v-icon>
         </v-btn>
-      </v-fab-transition>
     </div>
   </v-container>
 </template>
@@ -74,6 +72,7 @@ export default {
   data() {
     return {
       tab: null,
+      fab: false,
       items: [
         { tab: "One", content: "工作日" },
         { tab: "Two", content: "周末" }
@@ -720,7 +719,11 @@ export default {
   padding: 20px;
 }
 .fab{
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  margin: 0 16px 16px;
 }
 h2 {
   color: #2196f3;
