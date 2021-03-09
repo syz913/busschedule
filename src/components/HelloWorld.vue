@@ -11,7 +11,7 @@
         <v-tab-item key="One">
           <v-expansion-panels focusable>
             <v-expansion-panel v-for="(item, i) in weekdays" :key="i">
-              <v-expansion-panel-header style="font-weight: bold">
+              <v-expansion-panel-header style="font-weight: bold; padding: 3px">
                 <div class="text-center">
                   {{ item.route[0] }}
                   <v-btn class="ma-2" text icon color="blue lighten-2">
@@ -40,10 +40,10 @@
                         "
                       >
                         <td class="text-center">
-                          下一班次 {{ getNextTime(item.desserts, "name") }}
+                          下一班次: {{ getNextTime(item.desserts, "name") }}
                         </td>
                         <td class="text-center">
-                          下一班次 {{ getNextTime(item.desserts, "calories") }}
+                          下一班次: {{ getNextTime(item.desserts, "calories") }}
                         </td>
                       </tr>
                       <tr v-for="item2 in item.desserts" :key="item2.name">
@@ -60,7 +60,7 @@
         <v-tab-item key="Two">
           <v-expansion-panels focusable>
             <v-expansion-panel v-for="(item, i) in weekdend" :key="i">
-              <v-expansion-panel-header style="font-weight: bold">
+              <v-expansion-panel-header style="font-weight: bold; padding: 3px">
                 <div class="text-center">
                   {{ item.route[0] }}
                   <v-btn class="ma-2" text icon color="blue lighten-2">
@@ -89,10 +89,10 @@
                         "
                       >
                         <td class="text-center">
-                          下一班次 {{ getNextTime(item.desserts, "name") }}
+                          下一班次: {{ getNextTime(item.desserts, "name") }}
                         </td>
                         <td class="text-center">
-                          下一班次 {{ getNextTime(item.desserts, "calories") }}
+                          下一班次: {{ getNextTime(item.desserts, "calories") }}
                         </td>
                       </tr>
                       <tr v-for="item2 in item.desserts" :key="item2.name">
@@ -760,7 +760,7 @@ export default {
       var time = locations.find((item) => {
         if (item[key] >= curTime) return item;
       });
-      return time[key];
+      return time ? time[key] : '无';
     },
   },
 };
