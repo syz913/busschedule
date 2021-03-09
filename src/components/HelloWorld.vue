@@ -455,7 +455,7 @@ export default {
           desserts: [
             {
               name: "07:10",
-              calories: "7:00",
+              calories: "07:00",
             },
             {
               name: "",
